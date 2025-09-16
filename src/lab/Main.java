@@ -14,7 +14,6 @@ public class Main {
         think.addChoice("Want to lose?", thinkLose);
 
         Game game = new Game(root);
-
         game.playGame();
 
         System.exit(0);

@@ -25,8 +25,9 @@ public class Node {
     }
 
     public Node chooseNextNode(int index) {
-        return choices.get(index).node;
+        return choices.get(index).node();
     }
+
 
     @Override
     public String toString() {
@@ -42,14 +43,7 @@ public class Node {
     }
 }
 
-class Choice {
-    private final String description;
-    Node node;
-
-    Choice(String description, Node node) {
-        this.description = description;
-        this.node = node;
-    }
+record Choice(String description, Node node) {
 
     @Override
     public String toString() {
