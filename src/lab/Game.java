@@ -6,9 +6,9 @@ public class Game {
     private final Scanner consoleScanner;
     private Node current;
 
-    public Game(Node root) {
+    public Game(Node start) {
         consoleScanner = new Scanner(System.in);
-        this.current = root;
+        this.current = start;
     }
 
 
