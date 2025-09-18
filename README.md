@@ -5,7 +5,37 @@ A lite CYOA game/framework created for the "Finite state lab" in CS 439.1
 ---
 ## Introduction
 This short, feature-light game tells a story of the reader and a assumedly stray cat they happen upon.
-The reader can follow the cat or continue on home.
+The reader can follow the cat or continue on home. Here is a flowchart of game states and transitions.
+```mermaid
+flowchart TD
+
+    A[Start]
+    B[Watch from a distance]
+    C[Keep walking]
+    D[Approach]
+    E[Change your mind]
+    F[Follow him]
+    G[Continue to follow]
+
+    A -- Watch the cat --> B
+    A -- Keep walking --x C
+
+    B -- Keep watching --> B
+    B -- Approach the cat --> D
+    B -- Continue your walk --x C
+
+    C -- Game over --o A
+
+    D -- Change your mind --x E
+    D -- Follow him --> F
+
+    E -- Game over --o A
+
+    F -- Change your mind --x E
+    F -- Continue Following --x G
+
+    G -- Game over --o A
+```
 
 ## Technical Framework
 I developed a very basic framework in the Java programming language. 
