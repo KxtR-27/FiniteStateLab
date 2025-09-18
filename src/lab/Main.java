@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Node start = new Node("""
                 It's a breezy, dark night. You stroll home along the busy city sidewalk.
-                Suddenly, you notice a small cat looking at you from a nearby alley.
+                Suddenly, you notice a small cat loo king at you from a nearby alley.
                 """, false);
 
         Node keepWalking = new Node("""
@@ -24,17 +24,17 @@ public class Main {
                 He appears to be beckoning you.
                 """, false);
 
-        Node followHim = new Node("""
-                He lets out a gentle meow, then turns tail and trots off at a brisk pace.
-                You follow the cat. He seems pleased as you follow, periodically making a small
-                gurgling noise, like some cats do.
-                """, false);
-
         Node changeYourMind = new Node("""
                 While an adventure seems all fun and good, it's late. You don't know this cat.
                 "He'll be alright without me," you tell yourself. You turn around and walk back
                 the way you came, wondering what the cat might have led you to.
                 """, true);
+
+        Node followHim = new Node("""
+                He lets out a gentle meow, then turns tail and trots off at a brisk pace.
+                You follow the cat. He seems pleased as you follow, periodically making a small
+                gurgling noise, like some cats do.
+                """, false);
 
         Node continueToFollow = new Node("""
                 The cat leads you through a few turns along the neverending concrete. Eventually, the two of
